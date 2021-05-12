@@ -6,6 +6,35 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sad Or Happy?</title>
+  <style>
+      #wrapper {
+          width: 400px;
+          margin: 0 auto;
+      }
+
+      #paintField {
+          height: 400px;
+          width: 100%;
+          border: 1px solid black;
+      }
+
+      #controls {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 30px;
+      }
+
+      #clear, #train, #predict {
+          grid-column: 1 / -1;
+      }
+
+      .control {
+          font-size: 20px;
+          padding: 4px;
+          cursor: pointer;
+      }
+  </style>
 </head>
 <body>
   <div id="wrapper">

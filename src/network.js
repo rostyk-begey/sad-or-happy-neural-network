@@ -41,7 +41,7 @@ export default class Network {
       const [input, expected] = dataCase;
 
       this.input = input;
-      n.prediction.forEach((r, i) => {
+      this.prediction.forEach((r, i) => {
         this.layers[this.layers.length - 1].neurons[i].error = r - expected[i];
       });
     });
@@ -81,7 +81,7 @@ export default class Network {
       this.layers[0].neurons.length,
       this.layers[this.layers.length - 1].neurons.length,
       this.layers.length - 2,
-      this.weights
+      this.weights,
     ].join('*');
   }
 
